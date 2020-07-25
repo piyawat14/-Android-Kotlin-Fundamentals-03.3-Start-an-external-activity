@@ -32,9 +32,10 @@ class GameOverFragment : Fragment() {
         val binding: FragmentGameOverBinding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_game_over, container, false)
         // Add OnClick Handler for Try Again button
-        binding.tryAgainButton.setOnClickListener{view: View->
+        binding.tryAgainButton.setOnClickListener { view: View ->
             view.findNavController()
-                    .navigate(R.id.action_gameOverFragment_to_titleFragment)}
+                    .navigate(GameOverFragmentDirections.actionGameOverFragmentToGameFragment())
+        }
 
         return binding.root
     }
